@@ -1,0 +1,4 @@
+{
+  "name": "Inventra Development",
+    "image": "mcr.microsoft.com/devcontainers/flutter:3.32"
+    }
