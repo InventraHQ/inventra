@@ -1,5 +1,33 @@
 {
     "name": "Inventra Development",
-      "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-        "postCreateCommand": "git clone https://github.com/flutter/flutter.git -b stable /opt/flutter && echo 'export PATH=/opt/flutter/bin:$PATH' >> ~/.bashrc"
-        }
+
+      "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+
+        "features": {
+            "ghcr.io/devcontainers/features/git:1": {},
+                "ghcr.io/devcontainers/features/github-cli:1": {}
+                  },
+
+                    "customizations": {
+                        "vscode": {
+                              "extensions": [
+                                      "Dart-Code.flutter",
+                                              "Dart-Code.dart-code",
+                                                      "GitHub.copilot",
+                                                              "GitHub.copilot-chat",
+                                                                      "eamodio.gitlens",
+                                                                              "usernamehw.errorlens"
+                                                                                    ],
+                                                                                          "settings": {
+                                                                                                  "dart.flutterSdkPath": "/opt/flutter",
+                                                                                                          "editor.formatOnSave": true,
+                                                                                                                  "files.autoSave": "afterDelay"
+                                                                                                                        }
+                                                                                                                            }
+                                                                                                                              },
+
+                                                                                                                                "postCreateCommand": "sudo apt-get update && sudo apt-get install -y curl git unzip xz-utils zip libglu1-mesa openjdk-17-jdk && if [ ! -d /opt/flutter ]; then sudo git clone https://github.com/flutter/flutter.git -b stable /opt/flutter; fi && echo 'export PATH=/opt/flutter/bin:$PATH' >> ~/.bashrc && /opt/flutter/bin/flutter config --no-analytics && /opt/flutter/bin/flutter doctor",
+
+                                                                                                                                  "remoteUser": "vscode"
+                                                                                                                                  }
+}
