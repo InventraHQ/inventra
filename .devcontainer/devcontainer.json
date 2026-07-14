@@ -1,7 +1,5 @@
 {
     "name": "Inventra Development",
       "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-        "features": {
-            "ghcr.io/devcontainers/features/flutter:1": {}
-              }
-              }
+        "postCreateCommand": "git clone https://github.com/flutter/flutter.git -b stable /opt/flutter && echo 'export PATH=/opt/flutter/bin:$PATH' >> ~/.bashrc"
+        }
