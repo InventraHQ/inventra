@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../widgets/inventra_button.dart';
 import 'scan_screen.dart';
-import 'inventory_screen.dart';
-import 'settings_screen.dart';
+import 'inventory/inventory_screen.dart';
+import 'settings/settings_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
