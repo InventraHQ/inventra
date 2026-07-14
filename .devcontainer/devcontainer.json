@@ -1,4 +1,7 @@
 {
-  "name": "Inventra Development",
-    "image": "mcr.microsoft.com/devcontainers/flutter:3.32"
-    }
+    "name": "Inventra Development",
+      "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "ghcr.io/devcontainers/features/flutter:1": {}
+              }
+              }
